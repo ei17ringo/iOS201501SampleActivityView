@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *btnShare;
+- (IBAction)tapShare:(id)sender;
+
 
 
 @end

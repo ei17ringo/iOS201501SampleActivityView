@@ -24,4 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tapShare:(id)sender {
+    NSString *text  = @"googleのリンクあります";
+    NSURL    *url   = [NSURL URLWithString:@"http://google.com"];
+    
+    NSArray *activityItems = @[text, url];
+    
+    UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    
+    [self presentViewController:activityView animated:YES completion:nil];
+}
 @end
